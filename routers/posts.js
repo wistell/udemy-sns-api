@@ -31,7 +31,7 @@ router.post("/post", isAuthenticated, async (req, res) => {
 
     res.status(201).json(newPost);
   } catch (err) {
-    console.error(error);
+    console.error(err);
     return res.status(500).json({ error: "サーバーエラー" });
   }
 });
